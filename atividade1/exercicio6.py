@@ -3,7 +3,8 @@ def valorPagamento(valor_prestacao, dias_atraso):
     if dias_atraso == 0:
         valor = valor_prestacao
     else:
-        valor = valor_prestacao + (valor_prestacao*0.03) + (valor_prestacao*0.001*dias_atraso)
+        valor = valor_prestacao + (valor_prestacao*0.03)
+        valor = (valor*(1+0.001)**dias_atraso)
 
     return valor
 
